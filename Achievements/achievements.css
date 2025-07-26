@@ -1,0 +1,184 @@
+/* General page styling */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Hero section */
+.hero.achievements-hero {
+  position: relative;
+  padding: 4rem 2rem 2.5rem;
+  background: linear-gradient(145deg, #d1fae5, #ecfdf5);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Decorative background circles */
+.hero.achievements-hero::before,
+.hero.achievements-hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero.achievements-hero::before {
+  width: 180px;
+  height: 180px;
+  top: 20px;
+  left: 20px;
+  background: #a7f3d0;
+}
+
+.hero.achievements-hero::after {
+  width: 260px;
+  height: 260px;
+  bottom: -30px;
+  right: 30px;
+  background: #6ee7b7;
+}
+
+.hero.achievements-hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.75rem;
+  color: #065f46;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #374151;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Partners section */
+.partners-section {
+  flex: 1;
+  padding: 3rem 2rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid styling */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  animation: fadeInGrid 1.2s ease-out;
+}
+
+/* Individual partner logo card */
+.partner-item {
+  background: white;
+  border-radius: 16px;
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 160px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.partner-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Logo image inside partner box */
+.partner-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Tooltip */
+.partner-tooltip {
+  position: absolute;
+  bottom: -2rem;
+  background-color: #065f46;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.partner-item:hover .partner-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInGrid {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #065f46;
+  font-size: 0.85rem;
+  color: #ffffff;
+}

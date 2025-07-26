@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #1a1a1a;
+}
+
+#navbar {
+  z-index: 1000;
+}
+
+.hero {
+  background: linear-gradient(to right, #065f46, #0f766e);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.products-section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  margin-bottom: 60px;
+}
+
+.product h2 {
+  font-size: 2rem;
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  width: 100%;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide img,
+.carousel-slide figure {
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-slide figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.carousel-buttons button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  pointer-events: auto;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.product-info {
+  padding: 2rem 1rem;
+  background: #f3fdf5;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-info h3 {
+  color: #065f46;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #065f46;
+  padding-bottom: 0.3rem;
+}
+
+.modules-list,
+.features-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.modules-list li,
+.features-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.modules-list li::before,
+.features-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #10b981;
+  font-size: 1rem;
+}
+
+.impact-table {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.impact-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.impact-table thead {
+  background-color: #065f46;
+  color: white;
+}
+
+.impact-table th,
+.impact-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.impact-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.impact-summary {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .product-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .modules-list li,
+  .features-list li {
+    font-size: 0.95rem;
+  }
+
+  .impact-table th,
+  .impact-table td {
+    font-size: 0.9rem;
+  }
+}
+
+.footer {
+  background-color: #065f46;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+    max-height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger-list li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

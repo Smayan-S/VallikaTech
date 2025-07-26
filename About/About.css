@@ -1,0 +1,173 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+body {
+  flex: 1;
+}
+
+.about-section {
+  position: relative;
+  background: #f9f9f9;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  flex: 1 0 auto;
+}
+
+.background-shape {
+  position: absolute;
+  top: -50px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: #065f46;
+  opacity: 0.05;
+  transform: rotate(45deg);
+  z-index: 0;
+  border-radius: 30%;
+}
+
+.about-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+
+.about-text h2 {
+  background: none;
+  background-clip: text;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #065f46; 
+}
+
+.about-image {
+  flex: 1 1 40%;
+  min-width: 250px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.5s;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);  
+}
+
+.expertise-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: nowrap; 
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 0 0 200px;
+  max-width: 250px;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #065f46;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+  }
+
+  .expertise-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+.footer {
+  background-color: #065f46;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-info p,
+.footer-copy {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-address {
+  text-align: left !important;
+}
+
+.footer-address p {
+  margin: 0 0.6rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,170 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; 
+  text-align: center;
+  padding: 0 1rem;
+  background-color: #f8f8f8; 
+  animation: fadeInPage 1s ease forwards;
+  opacity: 0;
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.heading-wrapper {
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.small-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333; /* or whatever plain color you prefer */
+}
+
+.large-heading {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #363636, #0f766e, #065f46, #0f766e, #363636);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 6s linear infinite;
+}
+
+
+
+  @keyframes animate-gradient {
+    to {
+      background-position: 200%;
+    }
+  }
+
+
+/* Optional background behind the welcome text */
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+  }
+}
+
+.vision-mission {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 20px;
+  background-color: #e8f5e9;
+  transition: opacity 1s ease-in-out;
+}
+
+.erp-portal {
+  text-align: center;
+  background-color: #ffffff;;
+  padding: 80px 20px;
+  transition: opacity 1s ease-in-out;
+}
+
+.erp-content {
+  background: #ffffff;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.vm-box {
+  max-width: 400px;
+  max-height: 25vh;
+  background: white;
+  border-left: 5px solid #065f46;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.vm-box h2,
+.erp-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.vm-box p,
+.erp-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #065f46;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-info p,
+.footer-copy {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-links a {
+  margin: 0 0.6rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hidden + Animation Classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto;
+  transition: opacity 1s ease, transform 1s ease;
+}
