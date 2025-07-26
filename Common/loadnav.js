@@ -1,6 +1,4 @@
-const BASE_PATH = '/VallikaTech';
-
-fetch(`${BASE_PATH}/Common/navbar.html`)
+fetch(`Common/navbar.html`)
   .then(res => res.text())
   .then(data => {
     document.getElementById('navbar').innerHTML = data;
