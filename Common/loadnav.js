@@ -1,4 +1,4 @@
-const BASE_PATH = '/VallikaTech'; // <-- adjust this if your repo name ever changes
+const BASE_PATH = '/VallikaTech';
 
 fetch(`${BASE_PATH}/Common/navbar.html`)
   .then(res => res.text())
